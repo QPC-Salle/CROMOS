@@ -1,10 +1,16 @@
 ﻿Public Class Form2
     'declare
-    Dim user As String
+    Dim usuario As String
+
+    Public Sub Form2_LoadUser(sender As Object, e As EventArgs, User As String)
+        usuario = User
+        Form2_Load(sender, e)
+
+    End Sub
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'initz
-        user = " "
-        TBoxUsername.Text = ""
+        '
+        Label1.Text = Form1.getUser()
+        TBoxUsername.Text = " "
         BExit.Visible = True
         BTrade.Visible = True
         BVisit.Visible = True
@@ -33,6 +39,9 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        Me.Hide()
+        Dim form3 As New Form3()
+        form3.LoadUser(sender, e, usuario)
+        form3.Show()
     End Sub
 End Class

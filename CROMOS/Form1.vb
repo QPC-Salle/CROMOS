@@ -69,8 +69,13 @@
         Dim form2 As New Form2()
         ' Mostrar el formulario
         form2.Show()
-        ' Cerrar el formulario actual
-        Form1_Load(sender, e)
+        form2.Form2_LoadUser(sender, e, User)
+
+        ' Cerrar el formulario 
         Me.Hide()
     End Sub
+    Public Function getUser() As String
+
+        Return Me.User
+    End Function
 End Class
