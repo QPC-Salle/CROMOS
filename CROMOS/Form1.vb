@@ -7,15 +7,14 @@
 
 
     Public Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SQL.ReposarTenda()
         Password = ""
         Password2 = ""
         User = ""
         TBPassword.Text = ""
         TBPassword2.Text = ""
         TBUser.Text = ""
-        'If SQL.HasConnection() Then
-        'MsgBox("Conexió correcta")
-        'End If
+
     End Sub
 
     Private Sub BLogin_Click(sender As Object, e As EventArgs) Handles BLogin.Click

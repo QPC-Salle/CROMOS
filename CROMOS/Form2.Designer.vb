@@ -38,7 +38,7 @@ Partial Class Form2
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(182, 81)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Coleccio"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TBoxUsername
